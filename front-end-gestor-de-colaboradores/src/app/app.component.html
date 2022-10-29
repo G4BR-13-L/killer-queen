@@ -6,12 +6,12 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
      <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-           <a class="nav-link" (click)="onOpenModal(null, 'add')">Add Employee <span class="sr-only">(current)</span></a>
+           <a class="nav-link" (click)="onOpenModal(null, 'add')">Adicionar <span class="sr-only">(current)</span></a>
         </li>
      </ul>
      <form class="form-inline my-2 my-lg-0">
-        <input type="search" (ngModelChange)="searchColaboradores(key.value)" #key="ngModel" ngModel
-         name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search employees..." required>
+        <!--<input type="search" (ngModelChange)="searchColaboradores(key.value)" #key="ngModel" ngModel
+         name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search employees..." required>-->
      </form>
   </div>
 </nav>
@@ -75,7 +75,7 @@
              <input type="text" ngModel name="imgUrl" class="form-control" id="imgUrl" placeholder="Image URL" required>
           </div>
           <div class="modal-footer">
-             <button type="button" id="add-employee-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
+             <button type="button" id="add-colaborador-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
              <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary" >Save changes</button>
           </div>
           </form>
@@ -89,7 +89,7 @@
   <div class="modal-dialog" role="document">
      <div class="modal-content">
         <div class="modal-header">
-           <h5 class="modal-title" id="updateColaboradorModalLabel">Edit Employee {{editColaborador?.name}}</h5>
+           <h5 class="modal-title" id="updateColaboradorModalLabel">Edit Employee {{editColaborador?.nome}}</h5>
            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
            <span aria-hidden="true">&times;</span>
            </button>
@@ -139,10 +139,10 @@
            </button>
         </div>
         <div class="modal-body">
-           <p>Are you sure you want to delete employee {{deleteColaborador?.name}}?</p>
+           <p>Are you sure you want to delete employee {{deleteColaborador?.nome}}?</p>
            <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-              <button (click)="onDeleteColaborador(deleteColaborador?.id)" class="btn btn-danger" data-dismiss="modal">Yes</button>
+              <!--<button (click)="onDeleteColaborador(deleteColaborador?.id)" class="btn btn-danger" data-dismiss="modal">Yes</button>-->
            </div>
         </div>
      </div>
@@ -157,19 +157,4 @@
   <p>No Employees were found.</p>
 </div>
 </div>
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
 
